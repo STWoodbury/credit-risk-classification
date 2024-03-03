@@ -32,20 +32,55 @@ Due to the inbalanced nature of the training and testing data, a random over sam
             <li>default:.87</li>
             <li>weighted average: .99</li>
         </ul>
-        </li>
+        <li>Recall:
+        <ul>
+            <li>non-default: 1.0</li>
+            <li>default: .89</li>
+            <li>weighted average: .99</li>
         </ul>
-    </li>
+        <li>F1-Score:
+        <ul>
+            <li>non-default: 1.0</li>
+            <li>default: .88</li>
+            <li>weighted average: .99</li>
+        </ul>
+        </li>
+    </ul>
 </ul>
 
-
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+<ul> 
+    <li>Machine Learning Model 2: Random Oversample Model</li>
+    <ul>
+        <li>Accuracy: .996</li>
+        <li>Prescision: 
+        <ul>
+            <li>non-default: 1.0</li>
+            <li>default:.87</li>
+            <li>weighted average: 1.0</li>
+        </ul>
+        <li>Recall:
+        <ul>
+            <li>non-default: 1.0</li>
+            <li>default: 1.0</li>
+            <li>weighted average: 1.0</li>
+        </ul>
+        <li>F1-Score:
+        <ul>
+            <li>non-default: 1.0</li>
+            <li>default: .93</li>
+            <li>weighted average: 1.0</li>
+        </ul>
+        </li>
+    </ul>
+</ul>
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Both the original and the oversampled logical regression models perform exceedingly well, given the respective f1-scores of .99 and 1.0. However, the differences between the two models become more clear when examining the f-1 and recall scores when the models identify risky loans. 
 
-If you do not recommend any of the models, please justify your reasoning.
+There is a .11 increase in recall for these loan classes using the oversampled model, and a .05 increase in f-1 score meaning that more risky cases would be identified by this model than the original. 
+
+Given the risk involved in loan default, it would behoove the use of a more conservative model (one with higher f1 and recall for the loan default classes). Thus, it would be advised that though the difference between the models is relatively small, that difference would be consequential.
+
+It is for this reason that we would advise the use of the oversampled logical regression model for the purposes of borrower evaluation.
+
