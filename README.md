@@ -24,7 +24,7 @@ Due to the inbalanced nature of the training and testing data, a random over sam
 
 <ul> 
     <li>Machine Learning Model 1: Original Linear Regression</li>
-    <li><ul>
+    <ul>
         <li>Accuracy: .994</li>
         <li>Prescision: 
         <ul>
